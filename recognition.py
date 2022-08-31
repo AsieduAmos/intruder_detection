@@ -32,7 +32,7 @@ while True:
 		result1 = c.fetchone()
 		result1 = "+".join(result1)
 
-		c.execute("SELECT relationship FROM Details WHERE  id_no = (?)", (ids,))
+		c.execute("SELECT Relationship FROM Details WHERE  id_no = (?)", (ids,))
 		result2 = c.fetchone()
 		result2 = "+".join(result2)
 		# name = result[0][0]
@@ -40,7 +40,7 @@ while True:
 		print(ids,conf)
 		if conf < 50:
 			cv2.putText(img, f"Name: {result1}", (x,y-90), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (150,255,0),2)
-			cv2.putText(img, f"relationship: {result2}", (x,y-55), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (150,255,0),2)
+			cv2.putText(img, f"Relationship: {result2}", (x,y-55), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (150,255,0),2)
 			cv2.putText(img, f"Distance: {conf}", (x,y-20), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (150,255,0),2)
 			# print(name,result)
 			print(ids,conf)
