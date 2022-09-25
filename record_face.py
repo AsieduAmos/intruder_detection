@@ -17,8 +17,8 @@ cap = cv2.VideoCapture(0)
 
 Fullname = input("Enter your name: ")
 Id_number = input("Index: ")
-Relatioship = input("Relatioship: ")
-c.execute('INSERT INTO Details(id_no,name,Relationship) VALUES (?,?,?)', (Id_number,Fullname,Relatioship))
+Relationship = input("Relationship: ")
+c.execute('INSERT INTO Details(id_no,name,Relationship) VALUES (?,?,?)', (Id_number,Fullname,Relationship))
 
 
 uid = c.lastrowid
